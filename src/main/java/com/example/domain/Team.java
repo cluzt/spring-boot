@@ -12,22 +12,23 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * 
- * @author muhammad.duano
- * Uses XmlRootElement annotation to support both JSON and XML
+ * @author muhammad.duano Uses XmlRootElement annotation to support both JSON
+ *         and XML
  *
  */
 @Entity
 @XmlRootElement
 public class Team {
 
-	@Id @GeneratedValue
+	@Id
+	@GeneratedValue
 	Long id;
 	String name;
 	String location;
 	String mascotte;
 
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="teamId")
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name = "teamId")
 	Set<Player> players;
 
 	public Team() {
