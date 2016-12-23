@@ -22,7 +22,7 @@ public class HelloController {
 
 	@RequestMapping("/hello/{name}")
 	public @ResponseBody String hello(@PathVariable String name) {
-		return "Hi (git update), " + name;
+		return "Hola, " + name;
 	}
 
 }
